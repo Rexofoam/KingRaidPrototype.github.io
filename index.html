@@ -8,25 +8,26 @@
     <meta name="author" content="Icy">
     <meta name="description" content="A quick Hero Index viewer for King's Raid">
     <meta name="keywords" content="King,King's,Kings,Raid,Hero,Index,Codex">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous">
+    <link rel="icon" sizes="32x32" src='favicon.png'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
     <link rel="stylesheet" href="src/style.css">
  
 </head>
 
 <body>
-    <noscript>Please turn on Javascript to use this page.</noscript>
-
     <div class="app no-fouc hidden">
-        <nav class="main-navbar navbar navbar-expand-sm bg-dark navbar-dark">
-            <a class="navbar-brand" href="/">
-                <img class="main-navbar__logo" src="images/icons/Logo.png" alt="Logo">
-            </a>
-        </nav>
-
+        <div class="sidebar">
+            <a style="color:white;"><i class="classes-list__icon kr-classes__icon kr-classes__icon--All" data-class-type="All"></i>All</a>
+            <a style="color:white;"><i class="classes-list__icon kr-classes__icon kr-classes__icon--Knight" data-class-type="Knight"></i>Knight</a>
+            <a style="color:white;"><i class="classes-list__icon kr-classes__icon kr-classes__icon--Warrior" data-class-type="Warrior"></i>Warrior</a>
+            <a style="color:white;"><i class="classes-list__icon kr-classes__icon kr-classes__icon--Assassin" data-class-type="Assassin"></i>Assasin</a>
+            <a style="color:white;"><i class="classes-list__icon kr-classes__icon kr-classes__icon--Archer" data-class-type="Assassin"></i>Archer</a>
+            <a style="color:white;"><i class="classes-list__icon kr-classes__icon kr-classes__icon--Mechanic" data-class-type="Assassin"></i>Mechanic</a>
+            <a style="color:white;"><i class="classes-list__icon kr-classes__icon kr-classes__icon--Wizard" data-class-type="Assassin"></i>Wizard</a>
+            <a style="color:white;"><i class="classes-list__icon kr-classes__icon kr-classes__icon--Priest" data-class-type="Assassin"></i>Priest</a>
+        </div>
+        <!--
         <div class="container">
             <div class="kr-classes">
                 <ul class="classes-list kr-classes__list list-inline">
@@ -56,7 +57,8 @@
                     </li>
                 </ul>
             </div>
-
+            -->
+            <div class="main-layout">
             <div class="kr-heroes">
                 <ul class="heroes-list kr-heroes__list list-inline">
                 </ul>
@@ -118,26 +120,30 @@
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="text-center">
-                <a href="https://github.com/IcyDipity/KingsRaidIndex" rel="noopener" target="_blank">
-                    <i class="fab fa-github fa-2x text-white"></i>
-                </a>
-                <p class="footer__text text-white">Made by Icy</p>
-            </div>
-        </footer>
+        </div>
+        
     </div>
-
+    
     <script>
         document.querySelector('.app').classList.remove('hidden');
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+    <script>
+   
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="src/lazysizes.min.js"></script>
     <script src="src/script.js"></script>
 </body>

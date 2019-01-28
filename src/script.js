@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 (async function () {
     //Store promise from fetch data
-    const getKrData = fetchJSONData('src/heroesData.json');
+    const getKrData = fetchJSONData('https://rexofoam.github.io/KR_JSON.github.io/heroesData.json');
 
     function fetchJSONData(url) {
         return fetch(url)

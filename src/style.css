@@ -10,11 +10,41 @@
 
 .lazyload,
 .lazyloading {
-    background: url(/images/icons/loader.svg) no-repeat center;
+    background: url(../images/icons/loader.svg) no-repeat center;
 }
 
-.main-navbar__logo {
-    width: 4.525rem;
+.sidebar {
+  height: 100%;
+  width: 120px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 6px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main-layout {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 50px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
 
 .bg-dark {
@@ -49,7 +79,7 @@
 }
 
 .kr-classes__icon {
-    background-image: url(/images/icons/KrClassSheet.png);
+    background-image: url(../images/icons/KrClassSheet.png);
     background-repeat: no-repeat;
     display: block;
     background-size: cover;
