@@ -23,10 +23,11 @@
   background-color: #111;
   overflow-x: hidden;
   padding-top: 16px;
+  text-align: center;
 }
 
 .sidebar a {
-  padding: 6px 6px 6px 16px;
+  padding: 6px 6px 6px 6px;
   text-decoration: none;
   font-size: 20px;
   color: #818181;
@@ -40,11 +41,6 @@
 .main-layout {
   margin-left: 160px; /* Same as the width of the sidenav */
   padding: 50px 10px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
 }
 
 .bg-dark {
@@ -72,6 +68,10 @@
 .classes-list__item,
 .heroes-list__item {
     margin: 0 !important;
+}
+
+.iconion-center {
+    margin: auto;
 }
 
 .kr-heroes__list {
@@ -121,6 +121,13 @@
 .classes-list__icon {
     height: 3rem;
     width: 3rem;
+}
+
+@media all and (max-width: 700px) {
+  .sidebar {width: 70px;padding: 3px;}
+  .sidebar a {font-size: 12px;}
+  .classes-list__icon {height: 1.5rem;width: 1.5rem;}
+  .main-layout {margin-left: 75px;padding: 10px;}
 }
 
 .classes-list__icon--selected {
