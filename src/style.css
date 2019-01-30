@@ -136,11 +136,10 @@
 }
 
 .heroes-list__avatar {
-    background-color: #fff;
+    background-color: transparent;
     height: 6rem;
     width: 6rem;
     margin: 0;
-    padding: 5%;
 }
 
 .heroes-list__avatar--selected {
@@ -627,13 +626,13 @@ footer {
     }
 }
 
-@media (min-width: 425px) and (max-width: 575.98px) {
+@media (min-width: 425px) and (max-width: 600px) {
     .kr-heroes {
         min-height: 8rem;
     }
     .heroes-list__avatar {
-        height: 7.5rem;
-        width: 7.5rem;
+        height: 5rem;
+        width: 5rem;
     }
     .perk__img {
         min-width: 51.5px;
